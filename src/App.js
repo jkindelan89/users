@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import UserList from "./components/UsersList";
 import useUser from "./hooks/useUser";

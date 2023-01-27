@@ -41,7 +41,7 @@ export default function useUser() {
         deleteUserService(id)
             .then((response) => {
                 setDeletes(c => c + 1)
-                getUsersList()
+                getUsersList(pagination.currentPage)
             }).catch((error) => {
             console.log(error);
         })
