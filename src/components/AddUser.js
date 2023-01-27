@@ -1,7 +1,7 @@
-import {useContext, useRef} from "react";
+import {memo, useContext, useRef} from "react";
 import {UserContext} from "../contexts/UserContext";
 
-export default function AddUser() {
+export const AddUser = memo(()=> {
 
     const {addUser, errors} = useContext(UserContext)
     const nameRef = useRef();
@@ -51,8 +51,8 @@ export default function AddUser() {
                 <div className="py-2">
                     <label className="block text-gray-700 text-sm font-bold mb-2"> Gender:</label>
                     <select data-testid="gender"
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        ref={genderRef} required>
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            ref={genderRef} required>
                         <option/>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -62,8 +62,8 @@ export default function AddUser() {
                 <div className="py-2">
                     <label className="block text-gray-700 text-sm font-bold mb-2"> Status:</label>
                     <select data-testid="status"
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        ref={statusRef} required>
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            ref={statusRef} required>
                         <option/>
                         <option value="active">Active</option>
                         <option value="inactive">Inactive</option>
@@ -75,4 +75,4 @@ export default function AddUser() {
         </div>
 
     );
-}
+})

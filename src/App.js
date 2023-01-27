@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import UserList from "./components/UsersList";
 import useUser from "./hooks/useUser";
-import AddUser from "./components/AddUser";
 import {UserContext} from "./contexts/UserContext";
+import {AddUser} from "./components/AddUser";
 
 function App() {
     const {users, addUser, deleteUser, adds, deletes, loading, errors,pagination,nextPage,prevPage} = useUser()
