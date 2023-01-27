@@ -1,8 +1,8 @@
 import {baseUrl, headers, token} from "../utils/config";
 
-export const getUsers = ()=>{
+export const getUsers = (page,perPage)=>{
     return fetch(
-        baseUrl,
+        baseUrl+`?page=${page}&per_page=${perPage}`,
         {
             method: "get",
             headers

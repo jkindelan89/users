@@ -6,9 +6,9 @@ import AddUser from "./components/AddUser";
 import {UserContext} from "./contexts/UserContext";
 
 function App() {
-    const {users, addUser, deleteUser, adds, deletes, loading, errors} = useUser()
+    const {users, addUser, deleteUser, adds, deletes, loading, errors,pagination,nextPage,prevPage} = useUser()
     return (
-        <UserContext.Provider value={ {users, addUser, deleteUser,errors} }>
+        <UserContext.Provider value={ {users, addUser, deleteUser,errors,pagination,nextPage,prevPage} }>
             <div className="flex flex-col bg-slate-50 p-4">
                 <div className="flex w-full bg-slate-200 p-2 rounded justify-between">
                     <label className='text-xl font-bold'>Users</label>
